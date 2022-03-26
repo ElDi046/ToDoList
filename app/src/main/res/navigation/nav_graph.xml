@@ -22,10 +22,18 @@
         <action
             android:id="@+id/action_captureFragment_to_listFragment"
             app:destination="@id/listFragment" />
+        <argument
+            android:name="nombre"
+            app:argType="string"
+            android:defaultValue="Goku" />
     </fragment>
     <fragment
         android:id="@+id/listFragment"
         android:name="com.example.todolist.ListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/fragment_list" >
+        <argument
+            android:name="tarea"
+            app:argType="edu.tec.challenge.data.Tarea" />
+    </fragment>
 </navigation>
