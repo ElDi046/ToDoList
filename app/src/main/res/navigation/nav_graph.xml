@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/splashScreenFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -35,5 +35,13 @@
         <argument
             android:name="tarea"
             app:argType="edu.tec.challenge.data.Tarea" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="edu.itesm.moviequotes.fragments.SplashScreenFragment"
+        android:label="SplashScreenFragment" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
